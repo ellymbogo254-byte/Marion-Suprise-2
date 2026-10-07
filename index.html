@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Angel 😇❤️</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top, #4b164c, #18001f 55%, #08000d);
+    color: white;
+    font-family: Georgia, serif;
+    overflow: hidden;
+}
+
+/* Stars */
+
+.star {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* Screens */
+
+.screen {
+    display: none;
+    width: 100%;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 25px;
+
+    animation: fadeIn 1.2s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Card */
+
+.card {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 35px 25px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 0 40px rgba(255, 70, 180, 0.2);
+}
+
+/* Text */
+
+h1 {
+    color: #ff9bd8;
+    font-size: 34px;
+
+    text-shadow:
+        0 0 10px #ff4fc3,
+        0 0 25px #ff4fc3;
+}
+
+h2 {
+    color: #ffc4e9;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #ffe8f7;
+}
+
+/* Heart */
+
+.big-heart {
+    font-size: 65px;
+
+    animation: heartbeat 1.4s infinite;
+
+    margin-bottom: 10px;
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.18);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* Buttons */
+
+button {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    margin-top: 25px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: white;
+
+    background: linear-gradient(
+        45deg,
+        #ff3cac,
+        #784ba0
+    );
+
+    box-shadow:
+        0 0 15px rgba(255,60,172,0.5);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 30px rgba(255,60,172,0.8);
+}
+
+/* Floating hearts */
+
+.heart {
+    position: fixed;
+
+    bottom: -30px;
+
+    font-size: 25px;
+
+    animation: floatHeart 6s linear forwards;
+
+    pointer-events: none;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            scale(0.8);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.4);
+
+        opacity: 0;
+    }
+
+}
+
+/* Typing cursor */
+
+.typing::after {
+    content: "|";
+
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    50% {
+        opacity: 0;
+    }
+
+}
+
+/* Ending */
+
+.final-love {
+    color: #ff9bd8;
+
+    font-size: 25px;
+
+    margin-top: 25px;
+
+    text-shadow:
+        0 0 10px #ff4fc3,
+        0 0 20px #ff4fc3;
+}
+
+.small-heart {
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- STARS -->
+
+<div class="star" style="top:10%;left:15%;"></div>
+<div class="star" style="top:20%;left:75%;"></div>
+<div class="star" style="top:35%;left:30%;"></div>
+<div class="star" style="top:50%;left:85%;"></div>
+<div class="star" style="top:70%;left:10%;"></div>
+<div class="star" style="top:80%;left:60%;"></div>
+<div class="star" style="top:15%;left:45%;"></div>
+<div class="star" style="top:65%;left:40%;"></div>
+<div class="star" style="top:90%;left:80%;"></div>
+
+
+<!-- MUSIC -->
+
+<audio id="loveSong" preload="auto">
+    <source src="My Angel.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- SCREEN 1 -->
+
+<div class="screen active" id="screen1">
+
+    <div class="card">
+
+        <div class="big-heart">
+            😇❤️
+        </div>
+
+        <h1>
+            Marion... ❤️
+        </h1>
+
+        <p>
+            I made something special for you.
+        </p>
+
+        <p>
+            But before you open it...
+            promise me you'll stay until the end. 🥺❤️
+        </p>
+
+        <button onclick="startSurprise()">
+            I Promise 🤞❤️
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- SCREEN 2 -->
+
+<div class="screen" id="screen2">
+
+    <div class="card">
+
+        <div class="big-heart">
+            💕
+        </div>
+
+        <h1>
+            There is something I want you to know...
+        </h1>
+
+        <p id="introText" class="typing"></p>
+
+        <button onclick="nextScreen(3)">
+            Continue ❤️
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- SCREEN 3 -->
+
+<div class="screen" id="screen3">
+
+    <div class="card">
+
+        <div class="big-heart">
+            🎶❤️
+        </div>
+
+        <h1>
+            Listen to this...
+        </h1>
+
+        <p>
+            I chose this song because
+            it reminds me of you. 🥰
+        </p>
+
+        <p>
+            Just let the music play
+            while you read the next part.
+        </p>
+
+        <button onclick="nextScreen(4)">
+            Continue My Angel 😇❤️
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- SCREEN 4 -->
+
+<div class="screen" id="screen4">
+
+    <div class="card">
+
+        <div class="big-heart">
+            💌
+        </div>
+
+        <h1>
+            A Little Secret...
+        </h1>
+
+        <p id="secretText" class="typing"></p>
+
+        <button onclick="openHeart()">
+            Open My Heart ❤️
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- SCREEN 5 -->
+
+<div class="screen" id="screen5">
+
+    <div class="card">
+
+        <div class="big-heart">
+            🥺❤️
+        </div>
+
+        <h1>
+            Marion...
+        </h1>
+
+        <p id="finalText" class="typing"></p>
+
+    </div>
+
+</div>
+
+
+<!-- SCREEN 6 -->
+
+<div class="screen" id="screen6">
+
+    <div class="card">
+
+        <div class="big-heart">
+            😇❤️
+        </div>
+
+        <h1>
+            For My Angel 😇
+        </h1>
+
+        <p>
+            No matter where life takes us,
+            always remember that you are special.
+        </p>
+
+        <p>
+            Thank you for being you, Marion.
+        </p>
+
+        <p>
+            Keep this little surprise in your heart. ❤️
+        </p>
+
+        <div class="final-love">
+            Elly always loves Marion. ❤️
+        </div>
+
+        <h2>
+            You're my Angel 😇🥰
+        </h2>
+
+        <div class="small-heart">
+            💖✨💖
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   MESSAGES
+========================= */
+
+const introMessage =
+"Some people enter your life and somehow make ordinary moments feel special. You are one of those people, Marion. ❤️";
+
+const secretMessage =
+"There are things that are sometimes difficult to say with words... so I decided to let this little surprise say them for me. You are genuinely special to me, and I hope you never forget that. 😇❤️";
+
+const finalMessage =
+"No matter how busy life becomes, I will always appreciate the beautiful memories we create. Thank you for being someone who can make ordinary moments feel a little more special. ❤️";
+
+
+/* =========================
+   CHANGE SCREEN
+========================= */
+
+function nextScreen(number) {
+
+    document.querySelectorAll(".screen").forEach(screen => {
+        screen.classList.remove("active");
+    });
+
+    document
+        .getElementById("screen" + number)
+        .classList.add("active");
+}
+
+
+/* =========================
+   START SURPRISE
+========================= */
+
+function startSurprise() {
+
+    const song = document.getElementById("loveSong");
+
+    /*
+       The first tap is a user interaction,
+       so the browser should allow the music.
+    */
+
+    song.play().catch(error => {
+
+        console.log(
+            "The browser blocked automatic audio playback.",
+            error
+        );
+
+    });
+
+    nextScreen(2);
+
+    typeText(
+        "introText",
+        introMessage,
+        45
+    );
+
+    createHearts();
+
+}
+
+
+/* =========================
+   TYPING EFFECT
+========================= */
+
+function typeText(elementId, text, speed) {
+
+    const element =
+        document.getElementById(elementId);
+
+    element.innerHTML = "";
+
+    let index = 0;
+
+    const typing = setInterval(() => {
+
+        element.innerHTML += text.charAt(index);
+
+        index++;
+
+        if (index >= text.length) {
+
+            clearInterval(typing);
+
+        }
+
+    }, speed);
+
+}
+
+
+/* =========================
+   SCREEN 4
+========================= */
+
+document
+    .querySelector("#screen3 button")
+    .addEventListener("click", function() {
+
+        setTimeout(() => {
+
+            typeText(
+                "secretText",
+                secretMessage,
+                45
+            );
+
+        }, 500);
+
+    });
+
+
+/* =========================
+   OPEN HEART
+========================= */
+
+function openHeart() {
+
+    nextScreen(5);
+
+    typeText(
+        "finalText",
+        finalMessage,
+        45
+    );
+
+    createHearts();
+
+    setTimeout(() => {
+
+        nextScreen(6);
+
+        createHearts();
+
+    }, 9000);
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHearts() {
+
+    setInterval(() => {
+
+        const heart =
+            document.createElement("div");
+
+        heart.className = "heart";
+
+        const hearts = [
+            "❤️",
+            "💖",
+            "💕",
+            "💗",
+            "💓",
+            "💞",
+            "😇"
+        ];
+
+        heart.innerHTML =
+            hearts[
+                Math.floor(
+                    Math.random() * hearts.length
+                )
+            ];
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+        heart.style.animationDuration =
+            (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 8000);
+
+    }, 700);
+
+}
+
+</script>
+
+</body>
+</html>
